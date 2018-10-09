@@ -11,7 +11,7 @@ pipeline {
         }
         stage ('Build') {
             steps {
-                bat 'mvn clean package -U -gs C:\Users\williammolina\.m2\settings.xml' 
+                bat 'mvn clean package -U -gs "C:\Users\williammolina\.m2\settings.xml"' 
             }
         }
     }
