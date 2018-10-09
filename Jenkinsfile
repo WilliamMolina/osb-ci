@@ -2,7 +2,7 @@ node {
 
     stage('Initialize'){
         def mavenHome  = tool 'myMaven'
-        env.PATH = "${mavenHome}/bin:${env.PATH}"
+        env.Path = "${mavenHome}/bin:${env.Path}"
     }
 
     stage('Checkout') {
