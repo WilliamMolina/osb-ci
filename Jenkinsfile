@@ -1,16 +1,16 @@
-node {
-
-    stage('Initialize'){
-        def mavenHome  = tool 'myMaven'
-        env.Path = "${mavenHome}/bin:${env.Path}"
+pipeline {
+    agent any
+    tools {
+        maven 'myMaven'
     }
-
-    stage('Checkout') {
-        checkout scm
+    stages {        
+        stage('Checkout') {
+            checkout scm
+        }
+        stage ('Build') {
+            steps {
+                bat 'mvn clean install' 
+            }
+        }
     }
-
-    stage('Build'){
-        bat "mvn clean install"
-    }
-
 }
