@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d0fec7a4-6086-47c3-bcfb-e612666ca6ae" activeEnvironment="Default" name="REST Project 3" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="05c4bffa-51f0-4de3-9a9b-4f29e72b5900" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8098" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8098</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Encolar" path="/seti/he/encolar" id="f485bef1-45f3-4a47-8d90-a62289979513">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Encolar 1" id="7ee3a8ef-6de8-4058-b0ff-0a78d619efcc" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:params/>
+          <con:element>hola</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>respuesta</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="0df59185-670a-408c-ad15-4179453372d9" mediaType="text/xml" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://10.2.97.186:2608</con:endpoint>
+          <con:request><![CDATA[<log:logMensaje 	xmlns:log="http://www.seti.co/General/LogMensajes">
+<idMensaje>54fb90dc-e905-4e6d-91de-81fa9d5371ae</idMensaje>
+<idEndpoint>POSMQService|DownloadOrders</idEndpoint>
+<idSistemaOrigen>POS</idSistemaOrigen>
+<fechaInicio>2018-09-20T10:37:56.548-05:00</fechaInicio>
+<fechaFin>2018-09-20T10:37:56.65-05:00</fechaFin>
+<idTransaccion>10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10</idTransaccion>
+<!-- Inicio campos nuevos -->
+<componente>
+	<tipo>RECEIVER</tipo> <!-- CurrentComponentType -->
+	<nombre>ADAPTER_OUT</nombre> <!-- ComponentName -->
+</componente>
+<destino>
+	<nombreServicio>servicioDestino</nombreServicio> <!-- LegacyServiceName -->
+	<operacion>operacionDestino</operacion> <!-- LegacyServiceOperationName -->
+</destino>
+<reintento>false</reintento> <!-- RetryFlag -->
+<!-- Fin campos nuevos -->
+<mensaje>
+	<con:Eao10SecuCollection xmlns:con="http://xmlns.oracle.com/pcbpel/adapter/db/top/ConsultarEAO10Sinco">
+		<!--Zero or more repetitions:-->
+		<con:Eao10Secu>
+			<con:estado>0</con:estado>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0001  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0002  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0003  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0004  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0005  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0006  ~A ~00</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0007  ~A ~00</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0008  ~A ~00</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0338~C0001  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0338~C0002  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0002  ~B ~03</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0003  ~B ~03</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0004  ~B ~03</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0005  ~B ~03</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0006  ~B ~00</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0007  ~B ~00</con:eao10Datos>
+		</con:Eao10Secu>
+	</con:Eao10SecuCollection>
+</mensaje>
+<estadoTerminacion>ET</estadoTerminacion>
+<mensajeTerminacion>Prueba</mensajeTerminacion>
+<codigoError>0</codigoError>
+<mensajeError>Prueba error</mensajeError>
+</log:logMensaje>]]></con:request>
+          <con:originalUri>http://localhost/seti/eh/encolar</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="f60624f8-aef5-4300-8c9c-ce8c94e8d978" name="Encolar EH TestSuite">
+    <con:description>TestSuite generated for REST Service [http://localhost:8098]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="ef8fa651-2278-48a7-aac6-61aedf38b320" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Encolar TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [Encolar] located at [/seti/he/encolar]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="431f4bf6-b364-4cd0-9016-5d517bf09579">
+        <con:settings/>
+        <con:config service="http://localhost:8098" resourcePath="/seti/he/encolar" methodName="Encolar 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="0df59185-670a-408c-ad15-4179453372d9" mediaType="text/xml" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://10.2.97.186:2608</con:endpoint>
+            <con:request><![CDATA[<log:logMensaje 	xmlns:log="http://www.seti.co/General/LogMensajes">
+<idMensaje>54fb90dc-e905-4e6d-91de-81fa9d5371ae</idMensaje>
+<idEndpoint>POSMQService|DownloadOrders</idEndpoint>
+<idSistemaOrigen>POS</idSistemaOrigen>
+<fechaInicio>2018-09-20T10:37:56.548-05:00</fechaInicio>
+<fechaFin>2018-09-20T10:37:56.65-05:00</fechaFin>
+<idTransaccion>10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10</idTransaccion>
+<!-- Inicio campos nuevos -->
+<componente>
+	<tipo>RECEIVER</tipo> <!-- CurrentComponentType -->
+	<nombre>ADAPTER_OUT</nombre> <!-- ComponentName -->
+</componente>
+<destino>
+	<nombreServicio>servicioDestino</nombreServicio> <!-- LegacyServiceName -->
+	<operacion>operacionDestino</operacion> <!-- LegacyServiceOperationName -->
+</destino>
+<reintento>false</reintento> <!-- RetryFlag -->
+<!-- Fin campos nuevos -->
+<mensaje>
+	<con:Eao10SecuCollection xmlns:con="http://xmlns.oracle.com/pcbpel/adapter/db/top/ConsultarEAO10Sinco">
+		<!--Zero or more repetitions:-->
+		<con:Eao10Secu>
+			<con:estado>0</con:estado>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0001  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0002  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0003  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0004  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0005  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0006  ~A ~00</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0007  ~A ~00</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~100~0035~E0008  ~A ~00</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0338~C0001  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0338~C0002  ~A ~05</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0002  ~B ~03</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0003  ~B ~03</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0004  ~B ~03</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0005  ~B ~03</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0006  ~B ~00</con:eao10Datos>
+		</con:Eao10Secu>
+		<con:Eao10Secu>
+			<con:eao10Secuen>0</con:eao10Secuen>
+			<!--Optional:-->
+			<con:eao10Datos>VA_SIN_STG_DMCC~SINCO~STAGE~2013/05/22~VA_SIN_STG_DMCC~0000~000~0507~S0007  ~B ~00</con:eao10Datos>
+		</con:Eao10Secu>
+	</con:Eao10SecuCollection>
+</mensaje>
+<estadoTerminacion>ET</estadoTerminacion>
+<mensajeTerminacion>Prueba</mensajeTerminacion>
+<codigoError>0</codigoError>
+<mensajeError>Prueba error</mensajeError>
+</log:logMensaje>]]></con:request>
+            <con:originalUri>http://localhost/seti/eh/encolar</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="99d34240-1da5-429d-bb0c-90504cfe62e1" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:properties/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+</con:soapui-project>

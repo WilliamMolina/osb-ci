@@ -12,6 +12,17 @@
     <modules>
         <module>System</module>
         <module>Test</module>
-    </modules>
-
+    </modules>	
+	<build>
+    <plugins>
+    <plugin>
+        <groupId>com.smartbear.soapui</groupId>
+        <artifactId>soapui-maven-plugin</artifactId>
+        <version>5.4.0</version>
+		<configuration>
+            <skip>true</skip>
+        </configuration>        
+    </plugin>
+  </plugins>
+  </build>
 </project>
