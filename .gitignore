@@ -1,1 +1,6 @@
-.data
+.data/**
+System/.data/**
+Test/.data/**
+global-groovy.log
+soapui-errors.log
+soapui.log
