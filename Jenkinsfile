@@ -11,7 +11,7 @@ pipeline {
         }
         stage ('Test') {
             steps {
-                bat 'java --version' 
+                bat 'mvn --version' 
             }
             post {
                 always {
