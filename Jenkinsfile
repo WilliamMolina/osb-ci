@@ -11,7 +11,7 @@ pipeline {
         }
         stage ('Test') {
             steps {
-                bat 'mvn --version' 
+                bat 'mvn com.smartbear.soapui:soapui-maven-plugin:5.4.0:test' 
             }
             post {
                 always {
