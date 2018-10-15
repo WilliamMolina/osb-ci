@@ -11,7 +11,7 @@ pipeline {
         }
         stage ('Deploy for testing') {
             steps {
-                bat "mvn pre-integration-test -DoracleServerUrl='http://localhost:7101' -DoracleUsername='weblogic' -DoraclePassword='welcome1'  -DoracleHome='D:\jdev\'"
+                bat "mvn pre-integration-test -DoracleServerUrl='http://localhost:7101' -DoracleUsername='weblogic' -DoraclePassword='welcome1'  -DoracleHome='D:\\jdev\\'"
             }
         }
         stage ('Test') {
