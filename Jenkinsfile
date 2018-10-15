@@ -9,6 +9,11 @@ pipeline {
                 checkout scm
             }            
         }
+        stage ('Deploy for testing') {
+            steps {
+                bat "mvn pre-integration-test -DoracleServerUrl='http://localhost:7101' -DoracleUsername='weblogic' -DoraclePassword='welcome1'"
+            }
+        }
         stage ('Test') {
             steps {
                 bat 'mvn com.smartbear.soapui:soapui-maven-plugin:5.4.0:test' 
