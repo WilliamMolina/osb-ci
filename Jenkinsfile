@@ -11,8 +11,10 @@ pipeline {
         }
         stage ('Deploy for testing') {
             steps {
-                bat "D:\\IDE\\eclipse-jee-mars_Oracle\\eclipse.exe"
-            }
+                bat '''
+                mvn pre-integration-test -DoracleServerUrl=\\"http://localhost:7101\\" -DoracleUsername=\\"weblogic\\" -DoraclePassword=\\"welcome1\\" -DoracleHome=\\"D:/jdev/\\"
+                '''
+                }
         }
         stage ('Test') {
             steps {
