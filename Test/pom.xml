@@ -29,14 +29,27 @@
         <groupId>com.smartbear.soapui</groupId>
         <artifactId>soapui-maven-plugin</artifactId>
         <version>5.4.0</version>
-		<configuration>
+		    <configuration>
             <projectFile>Test-soapui-project.xml</projectFile>
-			<junitReport>true</junitReport>
-			<outputFolder>results</outputFolder>
+			      <junitReport>true</junitReport>
+			      <outputFolder>results</outputFolder>
             <projectProperties>
                <value>message=Hello World!</value>
             </projectProperties>
-        </configuration>        
+        </configuration>
+        <dependencies>
+            <dependency>
+                <groupId>com.smartbear.soapui</groupId>
+                <artifactId>soapui</artifactId>
+                <version>5.4.0</version>
+                <exclusions>
+                    <exclusion>  
+                        <groupId>com.smartbear.utils.analytics</groupId>
+                        <artifactId>out-app-analytics-provider</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>        
         <executions>
           <execution>
             <phase>test</phase>
