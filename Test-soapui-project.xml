@@ -4,7 +4,7 @@
   <con:interface xsi:type="con:WsdlInterface" id="8898a5f0-b33e-4db8-98d8-0d81101f352d" wsaVersion="NONE" name="pruebaDB_ptt-binding" type="wsdl" bindingName="{http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB}pruebaDB_ptt-binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/Test/pruebaDB?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     <con:definitionCache type="TEXT" rootPart="http://localhost:7101/Test/pruebaDB?wsdl">
-      <con:part>
+      <con:part> 
         <con:url>http://localhost:7101/Test/pruebaDB?wsdl</con:url>
         <con:content><![CDATA[<WL5G3N0:definitions name="pruebaDB-concrete" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
   <WL5G3N0:import location="http://localhost:7101/Test/pruebaDB?WSDL%2FTest%2FResources%2FpruebaDB" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB"/>
