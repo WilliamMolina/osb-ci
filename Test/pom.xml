@@ -33,7 +33,6 @@
             <projectFile>Test-soapui-project.xml</projectFile>
 			      <junitReport>true</junitReport>
 			      <outputFolder>results</outputFolder>
-                  <testFailIgnore>true</testFailIgnore>
             <projectProperties>
                <value>message=Hello World!</value>
             </projectProperties>
