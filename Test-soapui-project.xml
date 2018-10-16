@@ -4,7 +4,7 @@
   <con:interface xsi:type="con:WsdlInterface" id="8898a5f0-b33e-4db8-98d8-0d81101f352d" wsaVersion="NONE" name="pruebaDB_ptt-binding" type="wsdl" bindingName="{http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB}pruebaDB_ptt-binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/Test/pruebaDB?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     <con:definitionCache type="TEXT" rootPart="http://localhost:7101/Test/pruebaDB?wsdl">
-      <con:part> 
+      <con:part>
         <con:url>http://localhost:7101/Test/pruebaDB?wsdl</con:url>
         <con:content><![CDATA[<WL5G3N0:definitions name="pruebaDB-concrete" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
   <WL5G3N0:import location="http://localhost:7101/Test/pruebaDB?WSDL%2FTest%2FResources%2FpruebaDB" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB"/>
@@ -164,6 +164,89 @@
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:jmsPropertyConfig/>
             <con:wsaConfig mustUnderstand="NONE" version="200508" action="pruebaDBSelect"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" name="SOAP Request" id="3f49cc9c-a0f9-46da-ac3a-88ea3fd31757">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>pruebaDB_ptt-binding</con:interface>
+          <con:operation>pruebaDBSelect</con:operation>
+          <con:request name="SOAP Request" id="ad1e4a53-f523-4e76-9202-7af5ab4166df">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pru="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pru:pruebaDBSelectInputParameters/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="8f2ddb2d-deb2-4a6a-a6c6-c42812117ca4"/>
+            <con:assertion type="Schema Compliance" id="8b0e906f-9287-46b5-825b-f50a9f0523d5">
+              <con:configuration/>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:properties/>
+  </con:testSuite>
+  <con:testSuite id="7ffe7cb8-77bf-455d-939b-de831c86fc15" name="Prueba 2">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="776d04ea-07c0-417c-8145-10acb5b8cc30" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="pruebaDBSelect TestCase" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="delay" name="Delay" id="0bedc7df-3c44-461f-b4af-b059b5fc7469">
+        <con:settings/>
+        <con:config>
+          <delay>1000</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="329dd766-7bca-4704-8187-bde82c2b2d80" name="pruebaDBSelect">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>pruebaDB_ptt-binding</con:interface>
+          <con:operation>pruebaDBSelect</con:operation>
+          <con:request name="pruebaDBSelect" id="ff1ad87f-a6b6-425a-bc67-27b9f4a72c82">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pru="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pru:pruebaDBSelectInputParameters/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="Schema Compliance" id="97dc94f8-ac79-4aed-bbbf-0676b57cc919" name="Schema Compliance">
+              <con:configuration>
+                <definition/>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="94742b65-8802-45b4-8c38-ea927df371bf" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig action="pruebaDBSelect" mustUnderstand="NONE" version="200508"/>
             <con:wsrmConfig version="1.2"/>
           </con:request>
         </con:config>
