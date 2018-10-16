@@ -1,0 +1,14 @@
+<adapter-config name="pruebaDB" adapter="db" wsdlLocation="pruebaDB.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="Connection1" location="eis/DB/Connection1"/>
+  <endpoint-interaction portType="pruebaDB_ptt" operation="pruebaDBSelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="pruebaDB.Estados"/>
+      <property name="QueryName" value="pruebaDBSelect"/>
+      <property name="MappingsMetaDataURL" value="pruebaDB-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

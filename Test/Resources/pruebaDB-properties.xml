@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="ESTADOS.DESCRIPCION:db_column_not_null">true</entry>
+   <entry key="ESTADOS.DESCRIPCION:db_column_size">50</entry>
+   <entry key="ESTADOS.ES_ERROR:db_column_not_null">false</entry>
+   <entry key="ESTADOS.ES_ERROR:db_column_size">1</entry>
+   <entry key="ESTADOS.ID_ESTADO:db_column_type">CHAR</entry>
+   <entry key="return_single_result_set">false</entry>
+   <entry key="ESTADOS.ID_ESTADO:db_column_not_null">true</entry>
+   <entry key="ESTADOS.DESCRIPCION:db_column_type">VARCHAR2</entry>
+   <entry key="ESTADOS:db_table_type">TABLE</entry>
+   <entry key="ESTADOS.ID_ESTADO:db_column_size">2</entry>
+   <entry key="root_descriptor_alias">ESTADOS</entry>
+   <entry key="ESTADOS.ES_ERROR:db_column_type">CHAR</entry>
+   <entry key="ESTADOS:db_column_2">ES_ERROR</entry>
+   <entry key="ESTADOS:db_column_1">DESCRIPCION</entry>
+   <entry key="ESTADOS:db_column_0">ID_ESTADO</entry>
+</properties>

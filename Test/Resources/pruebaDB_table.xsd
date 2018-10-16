@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="EstadosCollection" type="EstadosCollection"/>
+   <xs:complexType name="EstadosCollection">
+      <xs:sequence>
+         <xs:element name="Estados" type="Estados" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Estados">
+      <xs:sequence>
+         <xs:element name="idEstado" type="string2"/>
+         <xs:element name="descripcion" type="string50" minOccurs="0"/>
+         <xs:element name="esError" type="string1" minOccurs="0" nillable="true"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="pruebaDBSelectInputParameters" type="pruebaDBSelect"/>
+   <xs:complexType name="pruebaDBSelect">
+      <xs:sequence/>
+   </xs:complexType>
+   <xs:simpleType name="string2">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="2"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="string50">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="50"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="string1">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="1"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>
