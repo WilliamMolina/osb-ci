@@ -157,7 +157,7 @@ if len(sys.argv) > 1:
             else:
                 print "No se configurará el DBAdapter porque el datasource no es nuevo"
 
-    if edited:
+    if edited and not added:
         activate()
     
 else:

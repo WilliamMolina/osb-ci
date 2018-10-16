@@ -5,3 +5,7 @@ global-groovy.log
 soapui-errors.log
 soapui.log
 results/**
+.adf/**
+.data/00000000/00000000.jdb
+src/META-INF/cwallet.sso
+src/META-INF/cwallet.sso.lck
