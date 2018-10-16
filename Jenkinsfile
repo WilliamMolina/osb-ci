@@ -9,6 +9,13 @@ pipeline {
                 checkout scm
             }            
         }
+        stage ('Configure') {
+            steps {
+                bat '''
+                D:\\jdev\\oracle_common\\common\\bin\\wlst.cmd .\\config\\datasource.py .\\config\\datasources
+                '''
+                }
+        }
         stage ('Deploy for testing') {
             steps {
                 bat '''
