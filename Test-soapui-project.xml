@@ -1,75 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="3643113e-3c7e-46ff-ae99-f7568f269475" activeEnvironment="Default" name="REST Project 7" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="ad484fbf-569a-4fe5-b7e4-ca95fa3f714c" activeEnvironment="Default" name="pruebaDB?wsdl" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:RestService" id="87b7b4c3-1657-45cc-8d18-d349712979b8" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:7101" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="8898a5f0-b33e-4db8-98d8-0d81101f352d" wsaVersion="NONE" name="pruebaDB_ptt-binding" type="wsdl" bindingName="{http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB}pruebaDB_ptt-binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/Test/pruebaDB?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:definitionCache type="TEXT" rootPart="http://localhost:7101/Test/pruebaDB?wsdl">
+      <con:part>
+        <con:url>http://localhost:7101/Test/pruebaDB?wsdl</con:url>
+        <con:content><![CDATA[<WL5G3N0:definitions name="pruebaDB-concrete" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:import location="http://localhost:7101/Test/pruebaDB?WSDL%2FTest%2FResources%2FpruebaDB" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB"/>
+  <WL5G3N0:binding name="pruebaDB_ptt-binding" type="WL5G3N1:pruebaDB_ptt">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="pruebaDBSelect">
+      <WL5G3N2:operation soapAction="pruebaDBSelect"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="pruebaDB_ptt-bindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N1:pruebaDB_ptt-binding" name="pruebaDB_ptt-bindingQSPort">
+      <WL5G3N2:address location="http://localhost:7101/Test/pruebaDB"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+      <con:part>
+        <con:url>http://localhost:7101/Test/pruebaDB?WSDL%2FTest%2FResources%2FpruebaDB</con:url>
+        <con:content><![CDATA[<WL5G3N2:definitions name="pruebaDB" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N0="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N3="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">
+  <WL5G3N0:partnerLinkType name="pruebaDB_plt">
+    <WL5G3N0:role name="pruebaDB_role">
+      <WL5G3N0:portType name="WL5G3N1:pruebaDB_ptt"/>
+    </WL5G3N0:role>
+  </WL5G3N0:partnerLinkType>
+  <WL5G3N2:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" schemaLocation="http://localhost:7101/Test/pruebaDB?SCHEMA%2FTest%2FResources%2FpruebaDB_table"/>
+    </schema>
+  </WL5G3N2:types>
+  <WL5G3N2:message name="pruebaDBSelect_inputParameters">
+    <WL5G3N2:part element="WL5G3N3:pruebaDBSelectInputParameters" name="pruebaDBSelect_inputParameters"/>
+  </WL5G3N2:message>
+  <WL5G3N2:message name="EstadosCollection_msg">
+    <WL5G3N2:part element="WL5G3N3:EstadosCollection" name="EstadosCollection"/>
+  </WL5G3N2:message>
+  <WL5G3N2:portType name="pruebaDB_ptt">
+    <WL5G3N2:operation name="pruebaDBSelect">
+      <WL5G3N2:input message="WL5G3N1:pruebaDBSelect_inputParameters"/>
+      <WL5G3N2:output message="WL5G3N1:EstadosCollection_msg"/>
+    </WL5G3N2:operation>
+  </WL5G3N2:portType>
+</WL5G3N2:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+      <con:part>
+        <con:url>http://localhost:7101/Test/pruebaDB?SCHEMA%2FTest%2FResources%2FpruebaDB_table</con:url>
+        <con:content><![CDATA[<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EstadosCollection" type="EstadosCollection"/>
+  <xs:complexType name="EstadosCollection">
+    <xs:sequence>
+      <xs:element name="Estados" type="Estados" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Estados">
+    <xs:sequence>
+      <xs:element name="idEstado" type="string2"/>
+      <xs:element name="descripcion" type="string50" minOccurs="0"/>
+      <xs:element name="esError" type="string1" minOccurs="0" nillable="true"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="pruebaDBSelectInputParameters" type="pruebaDBSelect"/>
+  <xs:complexType name="pruebaDBSelect">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:simpleType name="string2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="string50">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="string1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content>
+        <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+      </con:part>
+    </con:definitionCache>
     <con:endpoints>
-      <con:endpoint>http://localhost:7101</con:endpoint>
+      <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
     </con:endpoints>
-    <con:resource name="ProxyService" path="/Test/ProxyService" id="5b86c5a3-f6d8-4eb8-84c9-49e769babab7">
+    <con:operation id="0f32af97-a9eb-41e6-8121-20a3addc36b9" isOneWay="false" action="pruebaDBSelect" name="pruebaDBSelect" bindingOperationName="pruebaDBSelect" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
-      <con:parameters/>
-      <con:method name="ProxyService 1" id="10f997c4-43f7-4b87-bf3d-f726cdfe91b2" method="POST">
+      <con:call id="7b7af2a9-aeae-4069-8151-52963f9e6376" name="Request 1">
         <con:settings/>
-        <con:parameters/>
-        <con:representation type="RESPONSE">
-          <con:mediaType>text/xml; charset=iso-8859-1</con:mediaType>
-          <con:status>200</con:status>
-          <con:params/>
-          <con:element>data</con:element>
-        </con:representation>
-        <con:representation type="REQUEST">
-          <con:mediaType>application/json</con:mediaType>
-          <con:params/>
-        </con:representation>
-        <con:representation type="REQUEST">
-          <con:mediaType>application/xml</con:mediaType>
-          <con:params/>
-          <con:element>hol</con:element>
-        </con:representation>
-        <con:request name="Request 1" id="57df07af-25d4-4f6a-aaef-2b0adc0698e0" mediaType="application/xml" postQueryString="false">
-          <con:settings>
-            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-          </con:settings>
-          <con:endpoint>http://localhost:7101</con:endpoint>
-          <con:request>&lt;hola>mundo&lt;/hola></con:request>
-          <con:originalUri>http://localhost/Test/ProxyService</con:originalUri>
-          <con:credentials>
-            <con:authType>No Authorization</con:authType>
-          </con:credentials>
-          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-          <con:jmsPropertyConfig/>
-          <con:parameters/>
-        </con:request>
-      </con:method>
-    </con:resource>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pru="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pru:pruebaDBSelectInputParameters/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="pruebaDBSelect"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
   </con:interface>
-  <con:testSuite id="660d18a8-dc99-45d4-a378-471829377fa7" name="ProxyService TestSuite">
-    <con:description>TestSuite generated for REST Service [http://localhost:7101]</con:description>
+  <con:testSuite id="0ab22ee7-6cd3-4b1b-be84-283b938a1170" name="pruebaDB_ptt-binding TestSuite">
     <con:settings/>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="5c7485ed-ed7a-48b0-be52-6d6f62556f37" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ProxyService TestCase" searchProperties="true">
-      <con:description>TestCase generated for REST Resource [ProxyService] located at [/Test/ProxyService]</con:description>
+    <con:testCase id="f01632b0-2275-4f0f-a363-002041650d83" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="pruebaDBSelect TestCase" searchProperties="true">
       <con:settings/>
-      <con:testStep type="restrequest" name="Request 1" id="3f11f353-f777-4b8f-93d4-2e2fc73d7467">
+      <con:testStep type="request" id="f378b9e3-af41-4257-b5a4-fc5f7ee2aa42" name="pruebaDBSelect">
         <con:settings/>
-        <con:config service="http://localhost:7101" resourcePath="/Test/ProxyService" methodName="ProxyService 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="Request 1" id="57df07af-25d4-4f6a-aaef-2b0adc0698e0" mediaType="application/xml" postQueryString="false">
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>pruebaDB_ptt-binding</con:interface>
+          <con:operation>pruebaDBSelect</con:operation>
+          <con:request name="pruebaDBSelect" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d9f57b47-a26b-4251-992f-bd335e4f9882">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>http://localhost:7101</con:endpoint>
-            <con:request>&lt;hola>mundo&lt;/hola></con:request>
-            <con:originalUri>http://localhost/Test/ProxyService</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="48379f32-4211-4d6c-9689-e34e445c11ba" name="Valid HTTP Status Codes">
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pru="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pru:pruebaDBSelectInputParameters/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="Schema Compliance" id="d3b098a4-c34d-4a78-904c-3cbaef9c60ea" name="Schema Compliance">
               <con:configuration>
-                <codes>200</codes>
+                <definition/>
               </con:configuration>
             </con:assertion>
-            <con:assertion type="Response SLA Assertion" id="57f736fc-76bd-424e-a45d-2ec9a3b34ac4" name="Response SLA">
+            <con:assertion type="Invalid HTTP Status Codes" id="6e412c9e-73e6-471e-90c1-2dae5f79c4d6" name="Invalid HTTP Status Codes">
               <con:configuration>
-                <SLA>1000</SLA>
+                <codes>201</codes>
               </con:configuration>
             </con:assertion>
             <con:credentials>
@@ -77,8 +158,9 @@
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:jmsPropertyConfig/>
-            <con:parameters/>
-          </con:restRequest>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="pruebaDBSelect"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
         </con:config>
       </con:testStep>
       <con:properties/>
