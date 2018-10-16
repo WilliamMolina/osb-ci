@@ -1,6 +1,6 @@
 import os, sys
 from java.io import FileInputStream
-
+print "Iniciando script de configuracion de datasources"
 if len(sys.argv) > 1:
     datasource_dir = sys.argv[1]
     print "Buscando configuracion de datasources en: ",datasource_dir
@@ -18,10 +18,8 @@ if len(sys.argv) > 1:
             adminPassword=configProps.get("admin.password")
 
             dsName=configProps.get("datasource.name")
-            dsFileName=configProps.get("datasource.filename")
             dsDatabaseName=configProps.get("datasource.database.name")
             datasourceTarget=configProps.get("datasource.target")
-            dsJNDIName=configProps.get("datasource.jndiname")
             dsDriverName=configProps.get("datasource.driver.class")
             dsURL=configProps.get("datasource.url")
             dsUserName=configProps.get("datasource.username")
@@ -29,7 +27,7 @@ if len(sys.argv) > 1:
             dsTestQuery=configProps.get("datasource.test.query")
             if not edited:
                 connect(adminUserName, adminPassword, adminURL)
-                
+
             edit()
             startEdit()
             edited = True
