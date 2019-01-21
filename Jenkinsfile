@@ -9,13 +9,7 @@ pipeline {
                 checkout scm
             }            
         }
-        stage ('Configure') {
-            steps {
-                sh '''
-                D:\\jdev\\oracle_common\\common\\bin\\wlst.cmd .\\config\\datasource.py .\\config\\datasources
-                '''
-                }
-        }
+        
         stage ('Deploy for testing') {
             steps {
                 sh '''
@@ -23,6 +17,7 @@ pipeline {
                 '''
                 }
         }
+        
         stage ('Test') {
             steps {
                 sh 'mvn com.smartbear.soapui:soapui-maven-plugin:5.4.0:test -U' 
