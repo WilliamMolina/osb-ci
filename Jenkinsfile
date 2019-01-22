@@ -9,6 +9,13 @@ pipeline {
                 checkout scm
             }            
         }
+        stage ('Configure') {
+            steps {
+                sh '''
+                /opt/programs/Oracle_Home/oracle_common/common/bin/wlst.sh ./config/datasource.py ./config/datasources
+                '''
+                }
+        }
         
         stage ('Deploy for testing') {
             steps {
