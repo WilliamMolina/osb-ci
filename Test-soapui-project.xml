@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="ad484fbf-569a-4fe5-b7e4-ca95fa3f714c" activeEnvironment="Default" name="pruebaDB?wsdl" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:WsdlInterface" id="8898a5f0-b33e-4db8-98d8-0d81101f352d" wsaVersion="NONE" name="pruebaDB_ptt-binding" type="wsdl" bindingName="{http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB}pruebaDB_ptt-binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/Test/pruebaDB?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="8898a5f0-b33e-4db8-98d8-0d81101f352d" wsaVersion="NONE" name="pruebaDB_ptt-binding" type="wsdl" bindingName="{http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB}pruebaDB_ptt-binding" soapVersion="1_1" anonymous="optional" definition="http://192.168.11.7:7101/Test/pruebaDB?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:definitionCache type="TEXT" rootPart="http://localhost:7101/Test/pruebaDB?wsdl">
+    <con:definitionCache type="TEXT" rootPart="http://192.168.11.7:7101/Test/pruebaDB?wsdl">
       <con:part>
-        <con:url>http://localhost:7101/Test/pruebaDB?wsdl</con:url>
+        <con:url>http://192.168.11.7:7101/Test/pruebaDB?wsdl</con:url>
         <con:content><![CDATA[<WL5G3N0:definitions name="pruebaDB-concrete" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
-  <WL5G3N0:import location="http://localhost:7101/Test/pruebaDB?WSDL%2FTest%2FResources%2FpruebaDB" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB"/>
+  <WL5G3N0:import location="http://192.168.11.7:7101/Test/pruebaDB?WSDL%2FTest%2FResources%2FpruebaDB" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB"/>
   <WL5G3N0:binding name="pruebaDB_ptt-binding" type="WL5G3N1:pruebaDB_ptt">
     <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <WL5G3N0:operation name="pruebaDBSelect">
@@ -23,14 +23,14 @@
   <WL5G3N0:service name="pruebaDB_ptt-bindingQSService">
     <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
     <WL5G3N0:port binding="WL5G3N1:pruebaDB_ptt-binding" name="pruebaDB_ptt-bindingQSPort">
-      <WL5G3N2:address location="http://localhost:7101/Test/pruebaDB"/>
+      <WL5G3N2:address location="http://192.168.11.7:7101/Test/pruebaDB"/>
     </WL5G3N0:port>
   </WL5G3N0:service>
 </WL5G3N0:definitions>]]></con:content>
         <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
       </con:part>
       <con:part>
-        <con:url>http://localhost:7101/Test/pruebaDB?WSDL%2FTest%2FResources%2FpruebaDB</con:url>
+        <con:url>http://192.168.11.7:7101/Test/pruebaDB?WSDL%2FTest%2FResources%2FpruebaDB</con:url>
         <con:content><![CDATA[<WL5G3N2:definitions name="pruebaDB" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N0="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N3="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">
   <WL5G3N0:partnerLinkType name="pruebaDB_plt">
     <WL5G3N0:role name="pruebaDB_role">
@@ -39,7 +39,7 @@
   </WL5G3N0:partnerLinkType>
   <WL5G3N2:types>
     <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/CI-Test/Test/pruebaDB" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-      <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" schemaLocation="http://localhost:7101/Test/pruebaDB?SCHEMA%2FTest%2FResources%2FpruebaDB_table"/>
+      <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" schemaLocation="http://192.168.11.7:7101/Test/pruebaDB?SCHEMA%2FTest%2FResources%2FpruebaDB_table"/>
     </schema>
   </WL5G3N2:types>
   <WL5G3N2:message name="pruebaDBSelect_inputParameters">
@@ -58,7 +58,7 @@
         <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
       </con:part>
       <con:part>
-        <con:url>http://localhost:7101/Test/pruebaDB?SCHEMA%2FTest%2FResources%2FpruebaDB_table</con:url>
+        <con:url>http://192.168.11.7:7101/Test/pruebaDB?SCHEMA%2FTest%2FResources%2FpruebaDB_table</con:url>
         <con:content><![CDATA[<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="EstadosCollection" type="EstadosCollection"/>
   <xs:complexType name="EstadosCollection">
@@ -97,14 +97,14 @@
       </con:part>
     </con:definitionCache>
     <con:endpoints>
-      <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+      <con:endpoint>http://192.168.11.7:7101/Test/pruebaDB</con:endpoint>
     </con:endpoints>
     <con:operation id="0f32af97-a9eb-41e6-8121-20a3addc36b9" isOneWay="false" action="pruebaDBSelect" name="pruebaDBSelect" bindingOperationName="pruebaDBSelect" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
       <con:call id="7b7af2a9-aeae-4069-8151-52963f9e6376" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+        <con:endpoint>http://192.168.11.7:7101/Test/pruebaDB</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pru="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -136,7 +136,7 @@
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+            <con:endpoint>http://192.168.11.7:7101/Test/pruebaDB</con:endpoint>
             <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pru="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -178,7 +178,7 @@
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+            <con:endpoint>http://192.168.11.7:7101/Test/pruebaDB</con:endpoint>
             <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pru="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -224,7 +224,7 @@
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>http://localhost:7101/Test/pruebaDB</con:endpoint>
+            <con:endpoint>http://192.168.11.7:7101/Test/pruebaDB</con:endpoint>
             <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pru="http://xmlns.oracle.com/pcbpel/adapter/db/top/pruebaDB">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
