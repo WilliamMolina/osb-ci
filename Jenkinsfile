@@ -13,11 +13,11 @@ pipeline {
         stage ('Deploy for testing') {
             steps {
                 sh '''
-                mvn pre-integration-test -DoracleServerUrl=\"http://192.168.11.7:7101\" -DoracleUsername=\"weblogic\" -DoraclePassword=\"welcome1\" -DoracleHome=\"D:/jdev/\"
+                mvn pre-integration-test -DoracleServerUrl=\"http://192.168.11.7:7101\" -DoracleUsername=\"weblogic\" -DoraclePassword=\"welcome1\" -DoracleHome=\"/opt/programs/Oracle_Home\"
                 '''
                 }
         }
-        
+
         stage ('Test') {
             steps {
                 sh 'mvn com.smartbear.soapui:soapui-maven-plugin:5.4.0:test -U' 
